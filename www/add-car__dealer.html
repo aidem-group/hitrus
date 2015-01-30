@@ -1,0 +1,178 @@
+<form action="#">
+	<div class="white-block">
+		<div class="row">
+			<div class="form-horizontal add-car-description col-sm-5">
+				<h3>Описание машины</h3>
+				<div class="form-group">
+					<div class="col-sm-4">
+						<label for="mark">Марка</label>
+					</div>
+				    <div class="col-sm-8">
+				      	<select id="mark" name="mark">
+							<option></option>
+							<option></option>
+							<option></option>
+						</select>
+				    </div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4">
+						<label for="model">Модель
+						</label>
+					</div>
+				    <div class="col-sm-8">
+				      	<select id="model" name="model">
+							<option></option>
+							<option></option>
+							<option></option>
+						</select>
+				    </div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4">
+						<label for="year">Год</label>
+					</div>
+				    <div class="col-sm-8">
+				      	<select id="year" name="year">
+							<option></option>
+							<option></option>
+							<option></option>
+						</select>
+				    </div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4">
+						<label for="mileage">Пробег</label>
+					</div>
+				    <div class="col-sm-4">
+				      	<select id="mileage" name="mileage">
+							<option></option>
+							<option></option>
+							<option></option>
+						</select>
+					</div>
+				    <div class="col-sm-4">
+				      	<select name="mileage-measure">
+							<option>Километров</option>
+							<option></option>
+							<option></option>
+						</select>
+				    </div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4">
+						<label for="engine-size">Объем двигателя</label>
+					</div>
+				    <div class="col-sm-7">
+				    	<input type="text" id="engine-size" name="engine-size">
+				    </div>
+				    <div class="col-sm-1">
+				    	см<sup>3</sup>
+				    </div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4">
+						<label for="engine-power">Мощность</label>
+					</div>
+				    <div class="col-sm-7">
+				    	<input type="text" id="engine-power" name="engine-power">
+				    </div>
+				    <div class="col-sm-1">
+				    	ЛС
+				    </div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4">
+						<label for="drive">Привод</label>
+					</div>
+				    <div class="col-sm-8">
+				      	<select id="drive" name="drive">
+							<option></option>
+							<option></option>
+							<option></option>
+						</select>
+				    </div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4">
+						<label for="transmission">КПП</label>
+					</div>
+				    <div class="col-sm-8">
+				      	<select id="transmission" name="transmission">
+							<option></option>
+							<option></option>
+							<option></option>
+						</select>
+				    </div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4 text-h16">
+						<label for="num-of-owners">Количество хозяев по&nbsp;ПТС</label>
+					</div>
+				    <div class="col-sm-8">
+				      	<select id="num-of-owners" name="num-of-owners">
+							<option></option>
+							<option></option>
+							<option></option>
+						</select>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<div class="comment">
+			<div class="comment__label">
+				Ваш комменатрий
+			</div>
+			<div class="comment__text">
+				<textarea name="comment"></textarea>
+				<p class="info">
+					Не нужно указывать контактные данные, вся информация придет в личный кабинет, о чем мы уведомим вас на почту
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="white-block">
+		<h3>Фотографии вашей машины</h3>
+		<div class="places-photo-uploads">
+			<input type="file" name="view-1">
+			<input type="file" name="view-2">
+			<input type="file" name="view-3">
+			<input type="file" name="view-4">
+			<input type="file" name="view-5">
+			<input type="file" name="view-6">
+			<input type="file" name="view-7">
+			<input type="file" name="view-8">
+			<button class="add-file" data-name="view-1">
+				<div>Вид спереди</div>
+			</button>
+			<button class="add-file" data-name="view-2">
+				<div>Вид сзади</div>
+			</button>
+			<button class="add-file" data-name="view-3">
+				<div>С правой стороны</div>
+			</button>
+			<button class="add-file" data-name="view-4">
+				<div>С левой стороны</div>
+			</button>
+			<button class="add-file" data-name="view-5">
+				<div>Вид сбоку</div>
+			</button>
+			<button class="add-file" data-name="view-6">
+				<div>С водительского сиденья</div>
+			</button>
+			<button class="add-file" data-name="view-7">
+				<div>С пассажирского сиденья</div>
+			</button>
+			<button class="add-file" data-name="view-8">
+				<div>Под капотом</div>
+			</button>
+		</div>
+		<div class="add-photo">
+			<button class="button button--big add-file"><span class="fa fa-camera"></span> Прикрепить фото</button>
+		</div>
+		<div class="form-action-buttons">
+			<a href="#">Назад</a>
+			<input type="submit" class="button button--blue button--big" name="submit-this-step" value="Далее">
+		</div>
+	</div>
+</form>

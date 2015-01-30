@@ -1,0 +1,87 @@
+<div class="white-block">
+	<h1>Добавление новости</h1>
+	<form action="#">
+		<div class="form-horizontal">
+			<div class="form-group">
+				<div class="col-md-1">
+					<label for="title">Заголовок</label>
+				</div>
+				<div class="col-md-4">
+					<input type="text" name="title" id="title">
+					<span class="text-sub">Максимум 75 символов</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-1">
+					<label for="description">Описание</label>
+				</div>
+				<div class="col-md-11">
+					<textarea name="description" id="description"></textarea>
+					<span class="text-sub">Максимум 160 символов</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-4 col-sm-offset-1">
+					<input type="file" name="photo" class="hidden">
+					<button type="button" class="photo-place add-file" data-name="photo"></button><br>
+					<a href="#" class="add-file" data-name="photo"><span class="fa fa-camera"></span> Загрузить фото</a><br>
+					<span class="text-sub">Рекомендуемое разрешение 800x400 px</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-1">
+					<label for="signature">Подпись под&nbsp;фото</label>
+				</div>
+				<div class="col-md-4">
+					<input type="text" name="signature" id="signature">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-1">
+					<label for="text">Текст новости</label>
+				</div>
+				<div class="col-md-11">
+					<textarea name="text" id="text"></textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-1">
+					<label for="author">Автор</label>
+				</div>
+				<div class="col-md-4">
+					<input type="text" name="author" id="author">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-1">
+					<label for="main-news">Тип</label>
+				</div>
+				<div class="col-md-2">
+					<input type="checkbox" name="main-news" id="main-news">
+					<label for="main-news">Главная новость</label>
+				</div>
+			</div>
+			<div class="hr"></div>
+			<div class="form-group">
+				<div class="col-md-1">
+					<label for="description">SEO-текст</label>
+				</div>
+				<div class="col-md-4">
+					<textarea name="description" id="description"></textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-1">
+					<label for="keywords">Ключевые слова</label>
+				</div>
+				<div class="col-md-4">
+					<input type="text" name="keywords" id="keywords">
+				</div>
+			</div>
+		</div>
+		<div class="form-action-buttons">
+			<a href="#">Отмена</a>
+			<input type="submit" class="button button--blue button--big" name="submit" value="Создать">
+		</div>
+	</form>
+</div>

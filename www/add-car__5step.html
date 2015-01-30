@@ -1,0 +1,160 @@
+<div class="add-car-form">
+	<div class="white-block">
+		<h1>Обменять машину</h1>
+		<ul class="list-inline steps-list">
+			<li class="active"><span>1</span>Вход</li>
+			<li class="active"><span>2</span>Цель</li>
+			<li class="active"><span>3</span>Описание машины</li>
+			<li class="active"><span>4</span>Фото</li>
+			<li class="active"><span>5</span>Пожелания</li>
+		</ul>
+	</div>
+	<form action="#">
+		<div class="white-block">
+			<p class="title title-add-car">Укажите характеристики желаемой машины</p>
+			<form action="#">
+				<div class="row">
+					<div class="form-horizontal desired col-sm-6">
+						<p class="title sub">Машина с пробегом</p>
+						<div class="group">
+							<div class="marks" id="marks1"></div>
+							<div class="form-group">
+							    <div class="col-sm-8 col-sm-offset-4">
+							    	<a href="#" class="add-mark" id="add-mark1"><i class="fa fa-plus"></i> Ещё одна марка</a>
+							    </div>
+							</div>
+						</div>
+						<div class="group">
+							<div class="form-group">
+								<div class="col-sm-4">
+									<label for="transmission">КПП</label>
+								</div>
+							    <div class="col-sm-5">
+							      	<select class="transmission_select" name="transmission" id="transmission">
+							      		<option value="0">Не важна</option>
+									</select>
+							    </div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-4">
+									<label for="car-body">Кузов</label>
+								</div>
+							    <div class="col-sm-5">
+							      	<select class="car-body_select" name="car-body" id="car-body">
+							      		<option value="0">Не важна</option>
+									</select>
+							    </div>
+							</div>
+						</div>
+						<div class="group">
+							<div class="form-group">
+								<div class="col-sm-4">
+									<label for="price-from">Цена</label>
+								</div>
+							    <div class="col-sm-5">
+							      	<span class="split-input">
+										<input type="text" name="price-from" id="price-from" placeholder="от" data-value="от" value="от">
+										<input type="text" name="price-to" placeholder="до" data-value="до" value="до">
+									</span>
+							    </div>
+							    <div class="col-sm-1">
+									руб.
+							    </div>
+							</div>
+							<div class="form-group">
+							    <div class="col-sm-8 col-sm-offset-4">
+							    	<input type="checkbox" name="only-credit-bu" id="only-credit-bu">
+							    	<label for="only-credit-bu" class="only-credit">Только кредит</label>
+							    </div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4" for="date-from">Год</label>
+						    <div class="col-sm-5">
+						      	<div class="split-input">
+									<select name="date-from" id="date-from">
+										<option>от 2008</option>
+										<option>от 2009</option>
+										<option>от 2010</option>
+										<option>от 2011</option>
+										<option>от 2012</option>
+										<option>от 2013</option>
+										<option>от 2014</option>
+									</select>
+									<select name="date-to">
+										<option>до 2014</option>
+									</select>
+								</div>
+						    </div>
+						</div>
+						<div class="form-group">
+							<label for="mileage" class="col-sm-4">Пробег</label>
+						    <div class="col-sm-5">
+						      	<input type="text" name="mileage" id="mileage">
+						    </div>
+						    <div class="col-sm-3">
+								<select name="measure-of-mileage">
+									<option value="0">Километров</option>
+									<option value="1"></option>
+								</select>
+						    </div>
+						</div>
+					</div>
+					<div class="form-horizontal desired col-sm-6">
+						<p class="title sub">Новая машина</p>
+						<div class="group">
+							<div class="marks" id="marks2"></div>
+							<div class="form-group">
+							    <div class="col-sm-8 col-sm-offset-4">
+							    	<a href="#" class="add-mark" id="add-mark2"><i class="fa fa-plus"></i> Ещё одна марка</a>
+							    </div>
+							</div>
+						</div>
+						<div class="group">
+							<div class="form-group">
+								<div class="col-sm-4">КПП</div>
+							    <div class="col-sm-5">
+							      	<select class="transmission_select">
+							      		<option value="0">Не важна</option>
+									</select>
+							    </div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-4">Кузов</div>
+							    <div class="col-sm-5">
+							      	<select class="car-body_select">
+							      		<option value="0">Не важна</option>
+									</select>
+							    </div>
+							</div>
+						</div>
+						<div class="group">
+							<div class="form-group">
+								<div class="col-sm-4">Цена</div>
+							    <div class="col-sm-5">
+							      	<span class="split-input">
+										<input type="text" name="price-from" placeholder="от" data-value="от" value="от">
+										<input type="text" name="price-to" placeholder="до" data-value="до" value="до">
+									</span>
+							    </div>
+							    <div class="col-sm-1">
+									руб.
+							    </div>
+							</div>
+							<div class="form-group">
+							    <div class="col-sm-8 col-sm-offset-4">
+							    	<input type="checkbox" name="only-credit" id="only-credit">
+							    	<label for="only-credit" class="only-credit">Только кредит</label>
+							    </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-action-buttons">
+					<a href="#">Назад</a>
+					<input type="submit" class="button button--blue button--big" name="submit-this-step" value="Далее">
+				</div>
+			</form>
+		</div>
+	</form>
+</div>

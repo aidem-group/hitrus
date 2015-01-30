@@ -1,0 +1,93 @@
+<div class="add-dealer-form">
+	<h1>Добавление дилера</h1>
+	<div class="row">
+		<div class="col-lg-6">
+			<form class="form-horizontal" action="#" role="form">
+				<div class="form-group">
+					<div class="col-sm-2">
+						<label for="name">Название</label>
+					</div>
+					<div class="col-sm-7">
+						<input type="text" name="name" id="name">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-2">
+						<label for="city">Город</label>
+					</div>
+					<div class="col-sm-7">
+						<select name="city" id="city">
+							<option value="Saint Petersburg">Санкт-Петербург</option>
+							<option value="Moscow">Москва</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-2">
+						<label for="address">Адрес</label>
+					</div>
+					<div class="col-sm-7">
+						<input type="text" name="address" id="address">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-2">
+						<label for="phone">Телефон</label>
+					</div>
+					<div class="col-sm-7">
+						<input type="text" name="phone" id="phone">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-2">
+						<label for="description">Описание</label>
+					</div>
+					<div class="col-sm-10 line-height-normal">
+						<textarea type="text" name="description" id="description"></textarea>
+						<span class="text-sub">Максимум 500 символов</span>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-10 col-sm-offset-2 line-height-normal">
+						<div class="photo-place add-file" data-name="photo"></div>
+						<a href="#" class="add-file" data-name="photo"><span class="fa fa-camera"></span> Загрузить фото</a>
+						<input type="file" name="photo" class="hidden">
+					</div>
+				</div>
+				<h3>Аккаунт</h3>
+				<div class="form-group">
+					<div class="col-sm-2">
+						<label for="email">Эл. почта</label>
+					</div>
+					<div class="col-sm-6">
+						<input type="text" name="email" id="email">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-2">
+						<label for="pass">Пароль</label>
+					</div>
+					<div class="col-sm-6">
+						<div class="input-with-symbol">
+							<input type="password" name="pass">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-2">
+						<label for="confirm-pass">Пароль повторно</label>
+					</div>
+					<div class="col-sm-6">
+						<div class="input-with-symbol">
+							<input type="password" name="confirm-pass">
+						</div>
+					</div>
+				</div>
+				<div class="form-action-buttons">
+					<a href="#">Отмена</a>
+					<input type="submit" class="button button--blue button--big" name="submit" value="Создать">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

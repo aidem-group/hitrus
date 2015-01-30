@@ -1,0 +1,141 @@
+<div class="white-block settings">
+	<h1>Настройки</h1>
+	<h3>Какие автомобили с пробегом вам интересны</h3>
+	<form action="#">
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-horizontal">
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="city">Город</label>
+						</div>
+						<div class="col-sm-10">
+							<input type="checkbox" name="city1" id="city1"><label for="city1" class="label-right-marg">Москва</label>
+							<input type="checkbox" name="city2" id="city2"><label for="city2">Санкт-Петербург</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="year">Год</label>
+						</div>
+						<div class="col-sm-5">
+							<div class="split-input">
+								<select name="year-from" id="year">
+									<option>от 2008</option>
+									<option></option>
+								</select>
+								<select name="year-to">
+									<option>до 2014</option>
+									<option></option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="city">Марка</label>
+						</div>
+						<div class="col-sm-7">
+							<select name="year-to">
+								<option>Mercedes-Benz</option>
+								<option></option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="city">Модель</label>
+						</div>
+						<div class="col-sm-7">
+							<select name="year-to">
+								<option>Не важна</option>
+								<option></option>
+							</select>
+							<a href="#" class="add-mark" id="add-mark1"><i class="fa fa-plus"></i> Ещё одна марка</a>
+						</div>
+					</div>
+				</div>
+				<h3>Профиль</h3>
+				<div class="form-horizontal">
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="name">Название</label>
+						</div>
+						<div class="col-sm-7">
+							<input type="text" id="name" name="name">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="address">Адрес</label>
+						</div>
+						<div class="col-sm-7">
+							<input type="text" id="address" name="address">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="phone">Телефон</label>
+						</div>
+						<div class="col-sm-7">
+							<input type="text" id="phone" name="phone">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="description">Описание</label>
+						</div>
+						<div class="col-sm-10">
+							<textarea id="description" name="description"></textarea>
+							<span class="text-sub">Максимум 500 символов</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-7 col-sm-offset-2">
+							<div class="photo-place add-file" data-name="photo"></div>
+							<a href="#" class="add-file" data-name="photo"><span class="fa fa-camera"></span> Загрузить фото</a>
+							<input type="file" name="photo" class="hidden">
+						</div>
+					</div>
+				</div>
+				<h3>Аккаунт</h3>
+				<div class="form-horizontal">
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label>Эл. почта</label>
+						</div>
+						<div class="col-sm-5">
+							v.ivanov@mail.ru
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="password">Пароль</label>
+						</div>
+						<div class="col-sm-5">
+							<div class="input-with-symbol">
+								<input type="password" name="password">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="new-password">Новый пароль</label>
+						</div>
+						<div class="col-sm-5">
+							<div class="input-with-symbol">
+								<input type="password" name="new-password" id="new-password">
+								<input type="text" class="hidden">
+								<div class="symbol">
+									<span class="fa fa-eye-slash"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="hr"></div>
+		<input type="submit" class="button button--blue button--big" name="submit" value="Сохранить">
+	</form>
+</div>

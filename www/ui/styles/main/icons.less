@@ -1,0 +1,95 @@
+button {
+	outline: none;
+	border: 0;
+	background-color: transparent;
+	padding: 0;
+
+	&.fa {
+		color: @light-grey;
+		font-size: @font-size-h18;
+
+		&:hover { color: @green; }
+	}
+}
+
+.icon {
+	&:before {
+		display: inline-block;
+		content: '';
+		background: url(@new-sprite) no-repeat;
+		line-height: inherit;
+		vertical-align: sub;
+		margin-right: 4px;
+	}
+
+	&.icon-flag {
+		&:before {
+			width: 10px;
+			height: 17px;
+			background-position: -11px 0;
+		}
+
+		&.active {
+			&:before { background-position: 0 0; }
+		}
+	}
+
+	&.icon-eye {
+		&:before {
+			width: 16px;
+			height: 12px;
+			background-position: -22px 0;
+		}
+	}
+
+	&.icon-lighthouse {
+		&:before {
+			width: 9px;
+			height: 15px;
+			background-position: -38px 0;
+		}
+	}
+
+	&.icon-remove {
+		&:before {
+			width: 10px;
+			height: 10px;
+			background-position: -51px 0;
+			vertical-align: baseline;
+			margin-left: 2px;
+			margin-right: 0;
+		}
+	}
+
+	&.icon-wtb {
+		&:before {
+			width: 60px;
+			height: 16px;
+			background-position: 0 -18px;
+			vertical-align: baseline;
+			margin-left: 2px;
+			margin-right: 0;
+		}
+	}
+
+	&.icon-enter {
+		&:before {
+			width: 13px;
+			height: 8px;
+			background-position: 0 -35px;
+			vertical-align: baseline;
+			margin-right: 0;
+		}
+	}
+}
+
+.about__icon {
+	width: 90px;
+	height: 55px;
+	margin: 0 auto;
+	background: url(@about-sprite) no-repeat;
+
+	&.application { background-position-y: 0; }
+	&.car { background-position-y: -55px; }
+	&.dealer { background-position-y: -111px; }
+}

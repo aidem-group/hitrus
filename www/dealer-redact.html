@@ -1,0 +1,464 @@
+<div class="white-block dealer-redact">
+	<h1>Редактирование дилера</h1>
+	<div class="admin-block">
+		<button class="button button--small">Выключить дилера</button>
+		<button class="button button--small"><span class="fa fa-trash-o"></span> Удалить диллера</button>
+	</div>
+	<h3>Какие заявки вам интересны</h3>
+	<form action="#">
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-horizontal">
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="city">Город</label>
+						</div>
+						<div class="col-sm-10">
+							<input type="checkbox" name="city1" id="city1"><label for="city1" class="label-right-marg">Москва</label>
+							<input type="checkbox" name="city2" id="city2"><label for="city2">Санкт-Петербург</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="year">Год</label>
+						</div>
+						<div class="col-sm-5">
+							<div class="split-input">
+								<select name="year-from" id="year">
+									<option>от 2008</option>
+									<option></option>
+								</select>
+								<select name="year-to">
+									<option>до 2014</option>
+									<option></option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="city">Марка</label>
+						</div>
+						<div class="col-sm-7">
+							<select name="year-to">
+								<option>Mercedes-Benz</option>
+								<option></option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="city">Модель</label>
+						</div>
+						<div class="col-sm-7">
+							<select name="year-to">
+								<option>Не важна</option>
+								<option></option>
+							</select>
+							<a href="#" class="add-mark" id="add-mark1"><i class="fa fa-plus"></i> Ещё одна марка</a>
+						</div>
+					</div>
+				</div>
+				<h3>Профиль</h3>
+				<div class="form-horizontal">
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="name">Название</label>
+						</div>
+						<div class="col-sm-7">
+							<input type="text" id="name" name="name">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="address">Адрес</label>
+						</div>
+						<div class="col-sm-7">
+							<input type="text" id="address" name="address">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="phone">Телефон</label>
+						</div>
+						<div class="col-sm-7">
+							<input type="text" id="phone" name="phone">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="description">Описание</label>
+						</div>
+						<div class="col-sm-10">
+							<textarea id="description" name="description"></textarea>
+							<span class="text-sub">Максимум 500 символов</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-7 col-sm-offset-2">
+							<div class="photo-place add-file" data-name="photo"></div>
+							<a href="#" class="add-file" data-name="photo"><span class="fa fa-camera"></span> Загрузить фото</a>
+							<input type="file" name="photo" class="hidden">
+						</div>
+					</div>
+				</div>
+				<h3>Аккаунт</h3>
+				<div class="form-horizontal">
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label>Эл. почта</label>
+						</div>
+						<div class="col-sm-5">
+							v.ivanov@mail.ru
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="password">Пароль</label>
+						</div>
+						<div class="col-sm-5">
+							<div class="input-with-symbol">
+								<input type="password" name="password">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="new-password">Новый пароль</label>
+						</div>
+						<div class="col-sm-5">
+							<div class="input-with-symbol">
+								<input type="password" name="new-password">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<input type="submit" class="button button--blue button--big" name="submit" value="Сохранить">
+	</form>
+</div>
+<div class="grey-block catalog--grey catalog dealer-redact">
+	<h3>Мащины, доступные покупателям <sup class="text-sub">12 машин</sup></h3>
+	<select class="select-auto-width">
+		<option>Сортировать: по дате добавления</option>
+	</select>
+	<ul class="catalog-list catalog-list--visible list-unstyled row">
+		<li class="col-sm-3">
+			<div class="catalog-item">
+				<div class="admin-buttons">
+					<button class="button button--small car-redact" button-action="car-redact"><span class="fa fa-pencil"></span> Редактировать</button>
+					<button class="button button--small car-hide" button-action="car-visibility"><span class="fa fa-eye-slash"></span> Скрыть</button>
+					<button class="button button--small car-show" button-action="car-visibility"><span class="fa fa-eye"></span> Показать</button>
+					<button class="button button--small car-del" button-action="car-delete"><span class="fa fa-trash-o"></span></button>
+				</div>
+				<div class="photo">
+					<img src="/ui/images/cars/photo_1.jpg" alt="">
+				</div>
+				<div class="catalog-item__content">
+					<p class="price">
+						610 000 <span class="rouble">a</span>
+					</p>
+					<p class="string-with-wrap">
+						<a href="#">Mercedes-Benz E-klasse III (W211, S211) 200</a>
+					</p>
+					<p class="string-with-wrap">
+						2009, 106 000 км, <span class="text-sub">1.8 AT (163 л.с.)</span><br>
+						<span class="text-sub">седан, бензин, задний</span>
+					</p>
+					<p class="views">
+						<span class="text-sub">16 дней <span class="icon icon-eye"></span> 174</span>
+					</p>
+				</div>
+			</div>
+		</li>
+		<li class="col-sm-3">
+			<div class="catalog-item">
+				<div class="admin-buttons">
+					<button class="button button--small car-redact" button-action="car-redact"><span class="fa fa-pencil"></span> Редактировать</button>
+					<button class="button button--small car-hide" button-action="car-visibility"><span class="fa fa-eye-slash"></span> Скрыть</button>
+					<button class="button button--small car-show" button-action="car-visibility"><span class="fa fa-eye"></span> Показать</button>
+					<button class="button button--small car-del" button-action="car-delete"><span class="fa fa-trash-o"></span></button>
+				</div>
+				<div class="photo">
+					<img src="/ui/images/cars/photo_2.jpg" alt="">
+				</div>
+				<div class="catalog-item__content">
+					<p class="price">
+						679 888 <span class="rouble">a</span>
+					</p>
+					<p class="string-with-wrap">
+						<a href="#">Mercedes-Benz E-klasse III (W211, S211) 200</a>
+					</p>
+					<p class="string-with-wrap">
+						2009, 106 000 км, <span class="text-sub">1.8 AT (163 л.с.)</span><br>
+						<span class="text-sub">седан, бензин, задний</span>
+					</p>
+					<p class="views">
+						<span class="text-sub">16 дней <span class="icon icon-eye"></span> 174</span>
+					</p>
+				</div>
+			</div>
+		</li>
+		<li class="col-sm-3">
+			<div class="catalog-item">
+				<div class="admin-buttons">
+					<button class="button button--small car-redact" button-action="car-redact"><span class="fa fa-pencil"></span> Редактировать</button>
+					<button class="button button--small car-hide" button-action="car-visibility"><span class="fa fa-eye-slash"></span> Скрыть</button>
+					<button class="button button--small car-show" button-action="car-visibility"><span class="fa fa-eye"></span> Показать</button>
+					<button class="button button--small car-del" button-action="car-delete"><span class="fa fa-trash-o"></span></button>
+				</div>
+				<div class="photo">
+					<img src="/ui/images/cars/photo_3.jpg" alt="">
+				</div>
+				<div class="catalog-item__content">
+					<p class="price">
+						699 999 <span class="rouble">a</span>
+					</p>
+					<p class="string-with-wrap">
+						<a href="#">Mercedes-Benz E-klasse III (W211, S211) 200</a>
+					</p>
+					<p class="string-with-wrap">
+						2009, 106 000 км, <span class="text-sub">1.8 AT (163 л.с.)</span><br>
+						<span class="text-sub">седан, бензин, задний</span>
+					</p>
+					<p class="views">
+						<span class="text-sub">16 дней <span class="icon icon-eye"></span> 174</span>
+					</p>
+				</div>
+			</div>
+		</li>
+		<li class="col-sm-3">
+			<div class="catalog-item">
+				<div class="admin-buttons">
+					<button class="button button--small car-redact" button-action="car-redact"><span class="fa fa-pencil"></span> Редактировать</button>
+					<button class="button button--small car-hide" button-action="car-visibility"><span class="fa fa-eye-slash"></span> Скрыть</button>
+					<button class="button button--small car-show" button-action="car-visibility"><span class="fa fa-eye"></span> Показать</button>
+					<button class="button button--small car-del" button-action="car-delete"><span class="fa fa-trash-o"></span></button>
+				</div>
+				<div class="photo">
+					<img src="/ui/images/cars/photo_4.jpg" alt="">
+				</div>
+				<div class="catalog-item__content">
+					<p class="price">
+						739 000 <span class="rouble">a</span>
+					</p>
+					<p class="string-with-wrap">
+						<a href="#">Mercedes-Benz E-klasse III (W211, S211) 200</a>
+					</p>
+					<p class="string-with-wrap">
+						2009, 106 000 км, <span class="text-sub">1.8 AT (163 л.с.)</span><br>
+						<span class="text-sub">седан, бензин, задний</span>
+					</p>
+					<p class="views">
+						<span class="text-sub">16 дней <span class="icon icon-eye"></span> 174</span>
+					</p>
+				</div>
+			</div>
+		</li>
+		<li class="col-sm-3">
+			<div class="catalog-item">
+				<div class="admin-buttons">
+					<button class="button button--small car-redact" button-action="car-redact"><span class="fa fa-pencil"></span> Редактировать</button>
+					<button class="button button--small car-hide" button-action="car-visibility"><span class="fa fa-eye-slash"></span> Скрыть</button>
+					<button class="button button--small car-show" button-action="car-visibility"><span class="fa fa-eye"></span> Показать</button>
+					<button class="button button--small car-del" button-action="car-delete"><span class="fa fa-trash-o"></span></button>
+				</div>
+				<div class="photo">
+					<img src="/ui/images/cars/photo_5.jpg" alt="">
+				</div>
+				<div class="catalog-item__content">
+					<p class="price">
+						779 888 <span class="rouble">a</span>
+					</p>
+					<p class="string-with-wrap">
+						<a href="#">Mercedes-Benz E-klasse III (W211, S211) 200</a>
+					</p>
+					<p class="string-with-wrap">
+						2009, 106 000 км, <span class="text-sub">1.8 AT (163 л.с.)</span><br>
+						<span class="text-sub">седан, бензин, задний</span>
+					</p>
+					<p class="views">
+						<span class="text-sub">16 дней <span class="icon icon-eye"></span> 174</span>
+					</p>
+				</div>
+			</div>
+		</li>
+		<li class="col-sm-3">
+			<div class="catalog-item">
+				<div class="admin-buttons">
+					<button class="button button--small car-redact" button-action="car-redact"><span class="fa fa-pencil"></span> Редактировать</button>
+					<button class="button button--small car-hide" button-action="car-visibility"><span class="fa fa-eye-slash"></span> Скрыть</button>
+					<button class="button button--small car-show" button-action="car-visibility"><span class="fa fa-eye"></span> Показать</button>
+					<button class="button button--small car-del" button-action="car-delete"><span class="fa fa-trash-o"></span></button>
+				</div>
+				<div class="photo">
+					<img src="/ui/images/cars/photo_6.jpg" alt="">
+				</div>
+				<div class="catalog-item__content">
+					<p class="price">
+						899 999 <span class="rouble">a</span>
+					</p>
+					<p class="string-with-wrap">
+						<a href="#">Mercedes-Benz E-klasse III (W211, S211) 200</a>
+					</p>
+					<p class="string-with-wrap">
+						2009, 106 000 км, <span class="text-sub">1.8 AT (163 л.с.)</span><br>
+						<span class="text-sub">седан, бензин, задний</span>
+					</p>
+					<p class="views">
+						<span class="text-sub">16 дней <span class="icon icon-eye"></span> 174</span>
+					</p>
+				</div>
+			</div>
+		</li>
+		<li class="col-sm-3">
+			<div class="catalog-item">
+				<div class="admin-buttons">
+					<button class="button button--small car-redact" button-action="car-redact"><span class="fa fa-pencil"></span> Редактировать</button>
+					<button class="button button--small car-hide" button-action="car-visibility"><span class="fa fa-eye-slash"></span> Скрыть</button>
+					<button class="button button--small car-show" button-action="car-visibility"><span class="fa fa-eye"></span> Показать</button>
+					<button class="button button--small car-del" button-action="car-delete"><span class="fa fa-trash-o"></span></button>
+				</div>
+				<div class="photo">
+					<img src="/ui/images/cars/photo_7.jpg" alt="">
+				</div>
+				<div class="catalog-item__content">
+					<p class="price">
+						910 000 <span class="rouble">a</span>
+					</p>
+					<p class="string-with-wrap">
+						<a href="#">Mercedes-Benz E-klasse III (W211, S211) 200</a>
+					</p>
+					<p class="string-with-wrap">
+						2009, 106 000 км, <span class="text-sub">1.8 AT (163 л.с.)</span><br>
+						<span class="text-sub">седан, бензин, задний</span>
+					</p>
+					<p class="views">
+						<span class="text-sub">16 дней <span class="icon icon-eye"></span> 174</span>
+					</p>
+				</div>
+			</div>
+		</li>
+		<li class="col-sm-3">
+			<div class="catalog-item">
+				<div class="admin-buttons">
+					<button class="button button--small car-redact" button-action="car-redact"><span class="fa fa-pencil"></span> Редактировать</button>
+					<button class="button button--small car-hide" button-action="car-visibility"><span class="fa fa-eye-slash"></span> Скрыть</button>
+					<button class="button button--small car-show" button-action="car-visibility"><span class="fa fa-eye"></span> Показать</button>
+					<button class="button button--small car-del" button-action="car-delete"><span class="fa fa-trash-o"></span></button>
+				</div>
+				<div class="photo">
+					<img src="/ui/images/cars/photo_8.jpg" alt="">
+				</div>
+				<div class="catalog-item__content">
+					<p class="price">
+						919 888 <span class="rouble">a</span>
+					</p>
+					<p class="string-with-wrap">
+						<a href="#">Mercedes-Benz E-klasse III (W211, S211) 200</a>
+					</p>
+					<p class="string-with-wrap">
+						2009, 106 000 км, <span class="text-sub">1.8 AT (163 л.с.)</span><br>
+						<span class="text-sub">седан, бензин, задний</span>
+					</p>
+					<p class="views">
+						<span class="text-sub">16 дней <span class="icon icon-eye"></span> 174</span>
+					</p>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+<div class="grey-block catalog--grey catalog catalog--hidden-car dealer-redact">
+	<h3>Машины, доступные покупателям <sup class="text-sub">3 машины</sup></h3>
+	<select class="select-auto-width">
+		<option>Сортировать: по дате добавления</option>
+	</select>
+	<ul class="catalog-list catalog-list--hidden list-unstyled row">
+		<li class="col-sm-3">
+			<div class="catalog-item">
+				<div class="admin-buttons">
+					<button class="button button--small car-redact" button-action="car-redact"><span class="fa fa-pencil"></span> Редактировать</button>
+					<button class="button button--small car-hide" button-action="car-visibility"><span class="fa fa-eye-slash"></span> Скрыть</button>
+					<button class="button button--small car-show" button-action="car-visibility"><span class="fa fa-eye"></span> Показать</button>
+					<button class="button button--small car-del" button-action="car-delete"><span class="fa fa-trash-o"></span></button>
+				</div>
+				<div class="photo">
+					<img src="/ui/images/cars/photo_1.jpg" alt="">
+				</div>
+				<div class="catalog-item__content">
+					<p class="price">
+						610 000 <span class="rouble">a</span>
+					</p>
+					<p class="string-with-wrap">
+						<a href="#">Mercedes-Benz E-klasse III (W211, S211) 200</a>
+					</p>
+					<p class="string-with-wrap">
+						2009, 106 000 км, <span class="text-sub">1.8 AT (163 л.с.)</span><br>
+						<span class="text-sub">седан, бензин, задний</span>
+					</p>
+					<p class="views">
+						<span class="text-sub">16 дней <span class="icon icon-eye"></span> 174</span>
+					</p>
+				</div>
+			</div>
+		</li>
+		<li class="col-sm-3">
+			<div class="catalog-item">
+				<div class="admin-buttons">
+					<button class="button button--small car-redact" button-action="car-redact"><span class="fa fa-pencil"></span> Редактировать</button>
+					<button class="button button--small car-hide" button-action="car-visibility"><span class="fa fa-eye-slash"></span> Скрыть</button>
+					<button class="button button--small car-show" button-action="car-visibility"><span class="fa fa-eye"></span> Показать</button>
+					<button class="button button--small car-del" button-action="car-delete"><span class="fa fa-trash-o"></span></button>
+				</div>
+				<div class="photo">
+					<img src="/ui/images/cars/photo_2.jpg" alt="">
+				</div>
+				<div class="catalog-item__content">
+					<p class="price">
+						679 888 <span class="rouble">a</span>
+					</p>
+					<p class="string-with-wrap">
+						<a href="#">Mercedes-Benz E-klasse III (W211, S211) 200</a>
+					</p>
+					<p class="string-with-wrap">
+						2009, 106 000 км, <span class="text-sub">1.8 AT (163 л.с.)</span><br>
+						<span class="text-sub">седан, бензин, задний</span>
+					</p>
+					<p class="views">
+						<span class="text-sub">16 дней <span class="icon icon-eye"></span> 174</span>
+					</p>
+				</div>
+			</div>
+		</li>
+		<li class="col-sm-3">
+			<div class="catalog-item">
+				<div class="admin-buttons">
+					<button class="button button--small car-redact" button-action="car-redact"><span class="fa fa-pencil"></span> Редактировать</button>
+					<button class="button button--small car-hide" button-action="car-visibility"><span class="fa fa-eye-slash"></span> Скрыть</button>
+					<button class="button button--small car-show" button-action="car-visibility"><span class="fa fa-eye"></span> Показать</button>
+					<button class="button button--small car-del" button-action="car-delete"><span class="fa fa-trash-o"></span></button>
+				</div>
+				<div class="photo">
+					<img src="/ui/images/cars/photo_3.jpg" alt="">
+				</div>
+				<div class="catalog-item__content">
+					<p class="price">
+						699 999 <span class="rouble">a</span>
+					</p>
+					<p class="string-with-wrap">
+						<a href="#">Mercedes-Benz E-klasse III (W211, S211) 200</a>
+					</p>
+					<p class="string-with-wrap">
+						2009, 106 000 км, <span class="text-sub">1.8 AT (163 л.с.)</span><br>
+						<span class="text-sub">седан, бензин, задний</span>
+					</p>
+					<p class="views">
+						<span class="text-sub">16 дней <span class="icon icon-eye"></span> 174</span>
+					</p>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>

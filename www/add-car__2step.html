@@ -1,0 +1,75 @@
+<div class="add-car-form">
+	<div class="white-block">
+		<h1>Обменять машину</h1>
+		<ul class="list-inline steps-list">
+			<li class="active"><span>1</span>Вход</li>
+			<li class="active"><span>2</span>Цель</li>
+			<li><span>3</span>Описание машины</li>
+			<li><span>4</span>Фото</li>
+			<li><span>5</span>Пожелания</li>
+		</ul>
+	</div>
+	<div class="white-block">
+		<form action="#">
+			<div class="row goals">
+				<div class="col-md-4">
+					<label class="goal__item">
+						<input type="radio" class="hidden" name="goal" value="1">
+						<div class="img">
+							<div class="cash"></div>
+							<div class="arrow"></div>
+							<div class="car"></div>
+						</div>
+						<p class="goal__title">Купить</p>
+						<p class="description">
+							Опишите пожелания и&nbsp;дилеры сами подберут для вас лучшие варианты
+						</p>
+						<p class="type">
+							<input type="checkbox" name="buy-bu" id="buy-bu"><label for="buy-bu">С пробегом</label>
+							<input type="checkbox" name="buy-bu" id="buy-new"><label for="buy-new">Новую</label>
+						</p>
+					</label>
+				</div>
+				<div class="col-md-4">
+					<label class="goal__item">
+						<input type="radio" class="hidden" name="goal" value="2">
+						<div class="img">
+							<div class="car"></div>
+							<div class="arrow"></div>
+							<div class="cash"></div>
+						</div>
+						<p class="goal__title">Продать</p>
+						<p class="description">
+							Дилеры предложат вам лучшие цены
+						</p>
+						<p class="type">
+							Дилеры предложат вам лучшие цены
+						</p>
+					</label>
+				</div>
+				<div class="col-md-4">
+					<label class="goal__item">
+						<input type="radio" class="hidden" name="goal" value="3">
+						<div class="img">
+							<div class="car"></div>
+							<div class="arrow"></div>
+							<div class="car"></div>
+						</div>
+						<p class="goal__title">Обменять</p>
+						<p class="description">
+							Выберите машину из&nbsp;каталога или опишите пожелания и&nbsp;автодилеры сами подберут идеальный для вас вариант
+						</p>
+						<p class="type">
+							<input type="checkbox" name="exchange-bu" id="exchange-bu"><label for="exchange-bu">С пробегом</label>
+							<input type="checkbox" name="exchange-new" id="exchange-new"><label for="exchange-new">Новую</label>
+						</p>
+					</label>
+				</div>
+			</div>
+			<div class="form-action-buttons">
+				<a href="#">Назад</a>
+				<input type="submit" class="button button--blue button--big" name="submit-this-step" value="Далее">
+			</div>
+		</form>
+	</div>
+</div>

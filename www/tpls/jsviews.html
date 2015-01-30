@@ -1,0 +1,120 @@
+<script id="theTmpl" type="text/x-jsrender">
+	<div class="control group">
+		<div class="form-group">
+			<div class="col-sm-4">
+				<label>Марка</label>
+			</div>
+		    <div class="col-sm-7">
+		      	<select class="mark_select">
+		      		<option value="0">Не важна</option>
+		      		{^{for marks}}
+						<option value="{{:id}}">{{:name}}</option>
+					{{/for}}
+				</select>
+		    </div>
+		    <div data-link="visible{:#parent.data.length > 1}" class="col-sm-1"><button class="delete"><span class="fa fa-trash-o"></span></button></div>
+		</div>
+		<div class="form-group hidden model_control">
+			<div class="col-sm-4">
+				<label>Модель</label>
+			</div>
+		    <div class="col-sm-7 models_select_div"></div>
+		</div>
+	</div>
+</script>
+
+
+<script id="theTmpl1" type="text/x-jsrender">
+	 {^{for controls tmpl="#theTmpl" /}}
+</script>
+
+<script id="theTmpl2" type="text/x-jsrender">
+	 <select class="model_select">
+  		<option value="0">Не важна</option>
+  		{^{for models}}
+			<option value="{{:id}}">{{:name}}</option>
+		{{/for}}
+	</select>
+</script>
+
+<script id="delNews" type="text/x-jsrender">
+	<div class="admin-action">
+		<h4>Удаление новости</h4>
+		<p>Внимание, после удаления восстановить новость будет невозможно.</p>
+		<div class="form-action-buttons">
+			<a href="#" id="close-admin-block">Назад</a>
+			<a href="{{:link}}" class="button button--blue button--big">Удалить</a>
+		</div>
+	</div>
+</script>
+
+<script id="dialogueDelete" type="text/x-jsrender">
+	<div class="l-dialogue-delete">
+		<div class="b-dialogue-delete">
+			<p>
+				<span class="title">Удаление диалога</span><br>
+				Внимание, после удаления восстановить диалог будет невозможно. {{:person}} на сможет больше написать вам
+			</p>
+			<div class="form-action-buttons">
+				<a href="#" id="close-dialogue-delete">Назад</a>
+				<a href="#" class="button button--blue button--big" id="dialogue-delete">Удалить</a>
+			</div>
+		</div>
+	</div>
+</script>
+
+<script id="dialogueWasDeleted" type="text/x-jsrender">
+	<p>
+		<span class="title">Предложение было удалено {{:user}}ом</h3>
+	</p>
+</script>
+
+<script>
+	renderCarAddMark('#marks1', '#add-mark1');
+	renderCarAddMark('#marks2', '#add-mark2');
+
+	function renderCarAddMark( element, add )
+	{
+		var marks = [
+			{name: 'Audi', id: 1},
+			{name: 'BMW', id: 2},
+			{name: 'Honda', id: 3},
+			{name: 'Kia', id: 4}
+		]; 
+		var data = {};
+
+		var controls = [{marks: marks}];
+
+		data.controls = controls;
+
+		var template = $.templates("#theTmpl1");
+
+		template.link(element, data).on("click", ".delete", function () {
+            var view = $.view($(this).parents('.control'));
+            $.observable(data.controls).remove(view.index);
+        });
+
+        $(document).on('click', add, function(e){
+			e.preventDefault();
+			$.observable(data.controls).insert({marks: marks});
+			$('select').chosen({width: "100%", disable_search: true, inherit_select_classes: true});
+		});
+
+
+		$(document).on('change', '.mark_select', function(){
+			var id = $(this).val();
+			var modelRow = $(this).parents('.control').find('.model_control');
+			var data = {models: [
+				{name: '1', id: 1},
+				{name: '2', id: 1},
+				{name: '3', id: 1},
+				{name: '4', id: 1}
+			]};
+
+			$(this).parents('.control').find('.models_select_div').html($.templates("#theTmpl2").render(data));
+			$('select').chosen({width: "100%", disable_search: true, inherit_select_classes: true});
+			
+			(id != 0) ? modelRow.removeClass('hidden') : modelRow.addClass('hidden');
+		});
+	}
+</script>
